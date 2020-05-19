@@ -1,3 +1,6 @@
+//jshint esversion: 6
+// Copyright 2020 Isaac Svi
+
 let baseSize = Number(getComputedStyle(document.body).getPropertyValue('--base-size').replace('px',''));
 let slider = document.querySelector('.slider');
 let cards = document.querySelectorAll('.card');

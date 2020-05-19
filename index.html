@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Copyright 2020 Isaac Svi -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,6 +11,8 @@
   <title>Gallery Slider</title>
 </head>
 <body>
+
+<div id="gallerySlider"></div>
 
 <script src="galleryObjectMaker.js"></script>
 <script>
@@ -45,10 +48,11 @@
 			}
 		]
 	});
-	g.createGallerySlider(document.body);
+	let elem = document.getElementById("gallerySlider");
+	<!-- let elem = document.body; -->
+	g.createGallerySlider(elem);
 </script>
 <script src="script.js"></script>
-
 </body>
 
 

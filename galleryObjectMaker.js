@@ -1,4 +1,5 @@
-
+//jshint esversion: 6
+//Copyright 2020 Isaac Svi
 
 function GalleryObject (json) {
 	this.pictureSets = json.src;
@@ -32,7 +33,7 @@ GalleryObject.prototype.createGallerySlider = function (element) {
 	this.node.innerHTML += this.arrows;
 	
 	this.setFontFamily('verdana');
-}
+};
 GalleryObject.prototype.createAndAppendContainers = function (num) {
 	let card = "<div class='card'></div>";
 	let container = document.createElement("div");
