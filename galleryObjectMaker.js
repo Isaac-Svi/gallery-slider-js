@@ -35,7 +35,6 @@ GalleryObject.prototype.createGallerySlider = function (element) {
 	this.setFontFamily('verdana');
 };
 GalleryObject.prototype.createAndAppendContainers = function (num) {
-	let card = "<div class='card'></div>";
 	let container = document.createElement("div");
 	let classList = num === 1 ? ["container", "active", "reflect"] : ["container"];
 	container.classList.add(...classList);
