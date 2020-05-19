@@ -48,14 +48,15 @@ GalleryObject.prototype.createAndAppendContainers = function (num) {
 GalleryObject.prototype.createCard = function (picSet, info) {
 	let side = "front";
 	let card = "<div class='card'>";
+	console.log(info[0]);
 
 	for (let i = 0; i < 2; i++) {
 		card += `
 			<div class='${side}'>
 				<img src='${picSet[i]}' alt=''/>
 				<div class="info">
-					<h3>${info.header}</h3>
-					<p>${info.text}</p>
+					<h3>${info[i].header}</h3>
+					<p>${info[i].text}</p>
 					<div class="buttons">
 						<button class="flip-btn">Flip</button>
 					</div>
