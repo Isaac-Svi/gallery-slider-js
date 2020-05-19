@@ -47,7 +47,6 @@ GalleryObject.prototype.createAndAppendContainers = function (num) {
 GalleryObject.prototype.createCard = function (picSet, info) {
 	let side = "front";
 	let card = "<div class='card'>";
-	console.log(info[0]);
 
 	for (let i = 0; i < 2; i++) {
 		card += `
