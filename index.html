@@ -15,73 +15,10 @@
 <div id="gallerySlider"></div>
 
 <script src="galleryObjectMaker.js"></script>
+<script src="data.json"></script>
 <script>
-	let g = new GalleryObject(
-		{
-			"font" : "",
-			"src" : [
-				["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
-				["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
-				["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
-				["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
-				["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"]
-			],
-			"pictureInfo" : [
-				[
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					},
-					{
-						"header" : "Header Text",
-						"text" : "Text 2"
-					}
-				],
-				[
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					},
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					}
-				],
-				[
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					},
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					}
-				],
-				[
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					},
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					}
-				],
-				[
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					},
-					{
-						"header" : "Header Text",
-						"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
-					}
-				]
-			]
-		}
-	);
+	let g = new GalleryObject(jsonData);
 	let elem = document.getElementById("gallerySlider");
-	<!-- let elem = document.body; -->
 	g.createGallerySlider(elem);
 </script>
 <script src="script.js"></script>

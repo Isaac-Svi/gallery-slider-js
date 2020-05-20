@@ -5,6 +5,7 @@ function GalleryObject (json) {
 	this.pictureSets = json.src;
 	this.info = json.pictureInfo;
 	this.font = json.font;
+	this.reflect = json.reflection;
 		
 	this.node = document.createElement("div");
 	this.node.classList.add("frame");
@@ -22,6 +23,15 @@ GalleryObject.prototype.setFontFamily = function () {
 	this.node.querySelector("*").style.fontFamily = this.font;
 	this.node.querySelector(".buttons button").style.fontFamily = this.font;
 };
+GalleryObject.prototype.setReflection = function () {
+	const reflect = document.querySelector('.reflect');
+	if (this.reflect) {
+		const reflectVar = getComputedStyle(document.body).getPropertyValue('--reflection');
+		reflect.style['-webkit-box-reflect'] = reflectVar;
+	} else {
+		reflect.style['-webkit-box-reflect'] = 0;
+	}
+};
 
 GalleryObject.prototype.createGallerySlider = function (element) {
 	element.appendChild(this.node);
@@ -32,7 +42,8 @@ GalleryObject.prototype.createGallerySlider = function (element) {
 	}
 	this.node.innerHTML += this.arrows;
 	
-	this.setFontFamily('verdana');
+	this.setFontFamily(this.font);
+	this.setReflection(this.reflect);
 };
 GalleryObject.prototype.createAndAppendContainers = function (num) {
 	let container = document.createElement("div");
