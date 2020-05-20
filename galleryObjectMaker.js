@@ -25,10 +25,10 @@ GalleryObject.prototype.setFontFamily = function () {
 };
 GalleryObject.prototype.setReflection = function () {
 	if (this.reflect || this.reflect == undefined) {
-		const reflection = getComputedStyle(document.body).getPropertyValue('--reflection');
-		document.body.style.setProperty('--reflectVar', reflection);
+		const reflection = "below calc(var(--base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));"
+		document.body.style.setProperty('--reflection', reflection);
 	} else {
-		document.body.style.setProperty('--reflectVar', 0);
+		document.body.style.setProperty('--reflection', 0);
 	}
 };
 
