@@ -26,10 +26,8 @@ GalleryObject.prototype.setFontFamily = function () {
 GalleryObject.prototype.setReflection = function () {
 	if (this.reflect || this.reflect == undefined) {
 		const reflection = getComputedStyle(document.body).getPropertyValue('--reflection');
-		// reflect.style['-webkit-box-reflect'] = reflectVar;
 		document.body.style.setProperty('--reflectVar', reflection);
 	} else {
-		// reflect.style['-webkit-box-reflect'] = 0;
 		document.body.style.setProperty('--reflectVar', 0);
 	}
 };
