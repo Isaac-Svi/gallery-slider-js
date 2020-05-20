@@ -17,7 +17,7 @@ With that being said, here are some instructions as to how this mini library is 
 
 * The second link is the stylesheet for the gallery.
 ```html
-<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/ac207029fd07a4285f618e4cccb401fff3aae007/styles.css">
+<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/7f68081c3502be4f02ecd2308d7ed4e6c146f9c1/styles.css">
 ```
 
 
@@ -34,7 +34,7 @@ This is div is where the gallery will be inserted.
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/ac207029fd07a4285f618e4cccb401fff3aae007/galleryObjectMaker.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/7f68081c3502be4f02ecd2308d7ed4e6c146f9c1/galleryObjectMaker.js"></script>
 ```
 
 * Create the gallery object like so in the 2nd tag. More about the JSON that needs to be passed into the object in the next section.
