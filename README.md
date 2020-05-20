@@ -17,7 +17,7 @@ With that being said, here are some instructions as to how this mini library is 
 
 * The second link is the stylesheet for the gallery.
 ```html
-<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/9542acfa0e2fb07478fd0ae39d6ccb9b43ef1628/styles.css">
+<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/daa7883378cebe410b708461a3b724a7ae63c133/styles.css">
 ```
 
 
@@ -34,7 +34,7 @@ This is div is where the gallery will be inserted.
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/5c8f9896e36627626e2e8d69f4af4acc03174a52/galleryObjectMaker.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/daa7883378cebe410b708461a3b724a7ae63c133/galleryObjectMaker.js"></script>
 ```
 
 * Create the gallery object like so in the 2nd tag. More about the JSON that needs to be passed into the object in the next section.
@@ -48,7 +48,7 @@ This is div is where the gallery will be inserted.
 
 * Last tag provides animation to the gallery's components
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/9542acfa0e2fb07478fd0ae39d6ccb9b43ef1628/script.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/daa7883378cebe410b708461a3b724a7ae63c133/script.js"></script>
 ```
 
 ## How to write the JSON data:
