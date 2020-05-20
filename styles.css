@@ -78,7 +78,6 @@ img[alt]:after {
   transition: var(--transition);
   perspective: calc(var(--base-size) * 38);
   will-change: left;
-	clip: rect(calc(var(--base-size) * -1.2), auto, calc(var(--base-size) * 1.2), auto);
 }
 .container {
   position: relative;
