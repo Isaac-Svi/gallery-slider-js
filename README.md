@@ -10,12 +10,12 @@ With that being said, here are some instructions as to how this mini library is 
 
 ## Add the following style links to your header:
 
-..* The first link is to a CDN for Font Awesome.  This is needed for the arrow icons that will allow us to navigate through the gallery.
+* The first link is to a CDN for Font Awesome.  This is needed for the arrow icons that will allow us to navigate through the gallery.
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 ```
 
-..* The second link is the stylesheet for the gallery.
+* The second link is the stylesheet for the gallery.
 ```html
 <link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/9542acfa0e2fb07478fd0ae39d6ccb9b43ef1628/styles.css">
 ```
