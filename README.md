@@ -65,13 +65,12 @@ As of the current version of this library, the JSON object which will be passed 
 		Takes a 2d array, which can be filled up with links to all the images to be displayed, as follows:
 		
 ```javascript
-...,
 "src" : [
 	["<url for image for front image of card 1>", "<url used for back image of card 1>"],
 	["<url for image for front image of card 2>", "<url used for back image of card 2>"]
-],...
+],
 ```
-		In this example, we've made 2 cards with 2 sides each.  If a sub-index is left empty, a message of "Image Unavailable" will be shown.
+In this example, we've made 2 cards with 2 sides each.  If a sub-index is left empty, a message of "Image Unavailable" will be shown.
 		
 * **pictureInfo** :
 		This last key in our JSON object should hold a 2d array.  It will hold the text that will be displayed on each side of each card, each index and sub-index matching ```src``` respectively, like so:
