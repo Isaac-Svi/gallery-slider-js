@@ -59,7 +59,7 @@ As of the current version of this library, the JSON object which will be passed 
 		Place your font here like you would for any element in CSS. If left empty, gallery will use whatever default font your project is using.
 
 * **reflection** : 
-		Takes a value of ```true``` or ```false```.  If true, will add reflection to image currently shown. If omitted, default will be false.
+		Takes a value of ```true``` or ```false```.  If true, will add reflection to image currently shown. If omitted, default will be true.
 
 * **src** : 
 		Takes a 2d array, which can be filled up with links to all the images to be displayed, as follows:

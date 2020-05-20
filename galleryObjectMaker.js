@@ -24,12 +24,13 @@ GalleryObject.prototype.setFontFamily = function () {
 	this.node.querySelector(".buttons button").style.fontFamily = this.font;
 };
 GalleryObject.prototype.setReflection = function () {
-	const reflect = document.querySelector('.reflect');
-	if (this.reflect) {
-		const reflectVar = getComputedStyle(document.body).getPropertyValue('--reflection');
-		reflect.style['-webkit-box-reflect'] = reflectVar;
+	if (this.reflect || this.reflect == undefined) {
+		const reflection = getComputedStyle(document.body).getPropertyValue('--reflection');
+		// reflect.style['-webkit-box-reflect'] = reflectVar;
+		document.body.style.setProperty('--reflectVar', reflection);
 	} else {
-		reflect.style['-webkit-box-reflect'] = 0;
+		// reflect.style['-webkit-box-reflect'] = 0;
+		document.body.style.setProperty('--reflectVar', 0);
 	}
 };
 

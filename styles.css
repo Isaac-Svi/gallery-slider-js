@@ -28,6 +28,7 @@ img[alt]:after {
   --base-size: 500px;
 	--base: 500px;
 	--reflection: below calc(var(--base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));
+	--reflectVar: var(--reflection);
 }
 @media (min-width: 1200px) {
   :root {
@@ -136,7 +137,7 @@ img[alt]:after {
   height: calc(var(--base-size) * 0.8);
 }
 .reflect {
-  -webkit-box-reflect: 0;
+  -webkit-box-reflect: var(--reflectVar);
 }
 .info {
   position: absolute;

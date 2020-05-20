@@ -1,6 +1,6 @@
 var jsonData = {
 	"font" : "",
-	"reflection" : false,
+	"reflection" : true,
 	"src" : [
 		["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
 		["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
