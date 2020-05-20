@@ -32,7 +32,7 @@ This is div is where the gallery will be inserted.
 
 ## Add the following script tags to the bottom of the body **in the order they're shown**:
 
-..* The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
+* The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
 <script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/5c8f9896e36627626e2e8d69f4af4acc03174a52/galleryObjectMaker.js"></script>
 ```
@@ -46,7 +46,7 @@ This is div is where the gallery will be inserted.
 </script>
 ```
 
-..* Last tag provides animation to the gallery's components
+* Last tag provides animation to the gallery's components
 ```html
 <script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/9542acfa0e2fb07478fd0ae39d6ccb9b43ef1628/script.js"></script>
 ```
