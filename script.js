@@ -9,9 +9,7 @@ let bigCard = 1; //represents position of the big card in positions array
 let positions = [];
 
 //very important; sets width for slider according to baseSize and number of cards user wants to put in
-slider.style.width = baseSize + (baseSize / 2.5) * (containers.length - 1) + "px";
-
-document.addEventListener('DOMContentLoaded', setPositions);
+setPositions();
 window.addEventListener('resize', setPositions);
 
 let right = document.querySelector('.right button');
