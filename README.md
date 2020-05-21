@@ -48,7 +48,7 @@ This is div is where the gallery will be inserted.
 
 * Last tag provides animation to the gallery's components
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/ac207029fd07a4285f618e4cccb401fff3aae007/script.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/1bfbf72140c420303c1518ccdf4e6d29b3b6cc2f/script.js"></script>
 ```
 
 ## How to write the JSON data:
