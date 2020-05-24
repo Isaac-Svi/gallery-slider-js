@@ -12,7 +12,7 @@ With that being said, here are some instructions as to how this mini library is 
 
 * This link is the stylesheet for the gallery.
 ```html
-<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/7f68081c3502be4f02ecd2308d7ed4e6c146f9c1/styles.css">
+<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/30816dc878d55a1205a3fd08d607ee4105eeaf39/styles.css">
 ```
 
 
@@ -36,16 +36,16 @@ These divs are where the gallery will be inserted.
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/7f68081c3502be4f02ecd2308d7ed4e6c146f9c1/galleryObjectMaker.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/30816dc878d55a1205a3fd08d607ee4105eeaf39/galleryObjectMaker.js"></script>
 ```
 
 * Create the gallery object like so in the 2nd tag. 
 
-..* The first parameter in the GalleryObject is the "type" of gallery desired.  So far we have 2 options: "grid" or "slider".
-..* The second parameter is the element in which we're placing the gallery.
-..* Last is our JSON data, which will be explained in the next section.
+  * The first parameter in the GalleryObject is the "type" of gallery desired.  So far we have 2 options: "grid" or "slider".
+  * The second parameter is the element in which we're placing the gallery.
+  * Last is our JSON data, which will be explained in the next section.
 
-... The following is an example of how to initialize a "grid gallery".
+  The following is an example of how to initialize a "grid gallery".
 ```html
 <script>
   const elem = document.querySelector(".gallery-grid");
@@ -53,7 +53,7 @@ These divs are where the gallery will be inserted.
 </script>
 ```
 
-... The following is an example of how to initialize a "slider gallery".
+  The following is an example of how to initialize a "slider gallery".
 ```html
 <script>
   const elem = document.querySelector(".gallery-slider");
@@ -61,7 +61,7 @@ These divs are where the gallery will be inserted.
 </script>
 ```
 
-... I would just like to add that you can add the JSON however you like.  Here's an example of how to read and add the JSON asynchronously:
+  I would just like to add that you can add the JSON however you like.  Here's an example of how to read and add the JSON asynchronously:
 
 ```html
 <script>
@@ -86,7 +86,7 @@ These divs are where the gallery will be inserted.
 
 * Last tag provides animation to the gallery's components
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/1bfbf72140c420303c1518ccdf4e6d29b3b6cc2f/script.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/30816dc878d55a1205a3fd08d607ee4105eeaf39/script.js"></script>
 ```
 
 ## How to write the JSON data:
