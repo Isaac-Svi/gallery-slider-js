@@ -45,7 +45,7 @@ These divs are where the gallery will be inserted.
   * The second parameter is the element in which we're placing the gallery.
   * Last is our JSON data, which will be explained in the next section.
 
-  The following is an example of how to initialize a "grid gallery".
+The following is an example of how to initialize a "grid gallery".
 ```html
 <script>
   const elem = document.querySelector(".gallery-grid");
@@ -84,7 +84,7 @@ These divs are where the gallery will be inserted.
 ```
 
 
-* Last tag provides animation to the gallery's components
+* Last tag provides animation to the gallery's components.  Of course, if you followed the asynchronous method above to add this script, you don't have to add the following a second time.
 ```html
 <script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/30816dc878d55a1205a3fd08d607ee4105eeaf39/script.js"></script>
 ```
