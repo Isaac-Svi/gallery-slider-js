@@ -10,41 +10,79 @@ With that being said, here are some instructions as to how this mini library is 
 
 ## Add the following style links to your header:
 
-* The first link is to a CDN for Font Awesome.  This is needed for the arrow icons that will allow us to navigate through the gallery.
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-```
-
-* The second link is the stylesheet for the gallery.
+* This link is the stylesheet for the gallery.
 ```html
 <link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/7f68081c3502be4f02ecd2308d7ed4e6c146f9c1/styles.css">
 ```
 
 
-## Go to the body, and add the following element:
+## Go to the body, and add any of the following elements:
 
+*For a slider:
 ```html
-<div id="gallerySlider"></div>
+<div class="gallery-slider"></div>
+```
+OR
+
+*For a grid:
+```html
+<div class="gallery-grid"></div>
 ```
 
-This is div is where the gallery will be inserted.
+These divs are where the gallery will be inserted.
 
 
-## Add the following script tags to the bottom of the body **in the order they're shown**:
+## Add the following script tags to the bottom of the body in the order they're shown:
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
 <script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/7f68081c3502be4f02ecd2308d7ed4e6c146f9c1/galleryObjectMaker.js"></script>
 ```
 
-* Create the gallery object like so in the 2nd tag. More about the JSON that needs to be passed into the object in the next section.
+* Create the gallery object like so in the 2nd tag. 
+
+..*The first parameter in the GalleryObject is the "type" of gallery desired.  So far we have 2 options: "grid" or "slider".
+..*The second parameter is the element in which we're placing the gallery.
+..*Last is our JSON data, which will be explained in the next section.
+
+...The following is an example of how to initialize a "grid gallery".
 ```html
 <script>
-	let g = new GalleryObject(jsonData);
-	let elem = document.getElementById("gallerySlider");
-	g.createGallerySlider(elem);
+  const elem = document.querySelector(".gallery-grid");
+  new GalleryObject("grid", elem, data);
 </script>
 ```
+
+...The following is an example of how to initialize a "slider gallery".
+```html
+<script>
+  const elem = document.querySelector(".gallery-slider");
+  new GalleryObject("slider", elem, data);
+</script>
+```
+
+...I would just like to add that you can add the JSON however you like.  Here's an example of how to read and add the JSON asynchronously:
+
+```html
+<script>
+  fetch('data2.json')
+  .then(response => response.json())
+  .then(data => {
+    const elem = document.querySelector(".gallery-grid");
+    new GalleryObject("grid", elem, data);
+    const elem2 = document.querySelector(".gallery-slider");
+    new GalleryObject("slider", elem2, data);
+  })
+  .then(() => {
+    const src = "script.js";
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.body.appendChild(script);
+  });
+</script>
+```
+
 
 * Last tag provides animation to the gallery's components
 ```html
@@ -58,7 +96,16 @@ As of the current version of this library, the JSON object which will be passed 
 * **font** : 
 		Place your font here like you would for any element in CSS. If left empty, gallery will use whatever default font your project is using.
 
+* **baseSize** : 
+		For a grid gallery, this means the minimum width and height of our grid items.
+    For a slider gallery, this means the width of our active item.  This is the item currently being presented in our slider.
+
+* **flipDirection** : 
+    Only for grid gallery.
+		Two possible values of "x" and "y".  x will make our grid items flip along a horizontal axis. y will flip them along a vertical axis.  If no value is given, default will be "x".
+
 * **reflection** : 
+    Only for slider gallery.
 		Takes a value of ```true``` or ```false```.  If true, will add reflection to image currently shown. If omitted, default will be true.
 
 * **src** : 

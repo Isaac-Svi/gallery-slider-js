@@ -1,9 +1,14 @@
 {
-	"font" : "",
-	"reflection" : true,
+  "font" : "Roboto",
+  "baseSize" : 300,
+  "reflection" : true,
+  "flipDirection" : "x",
 	"src" : [
 		["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
 		["https://bit.ly/2LJhqiy", "https://bit.ly/2WLx17E"],
+		["https://bit.ly/2WSoP5T", "https://bit.ly/2TmxR8I"],
+		["https://bit.ly/2z6E6XG", "https://bit.ly/2XdKZOF"],
+		["https://bit.ly/2ZmpNsz", "https://bit.ly/2LIGZ3h"],
 		["https://bit.ly/2WSoP5T", "https://bit.ly/2TmxR8I"],
 		["https://bit.ly/2z6E6XG", "https://bit.ly/2XdKZOF"],
 		["https://bit.ly/2ZmpNsz", "https://bit.ly/2LIGZ3h"]
@@ -58,6 +63,6 @@
 				"header" : "Header Text",
 				"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
 			}
-		]
+    ]
 	]
 }

@@ -4,24 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
   
   <title>Gallery Slider</title>
+
+  <style>
+    section {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
 
-<div id="gallerySlider"></div>
+  <section id="grid-section">
+    <div class="gallery-grid"></div>
+  </section>
+  <section id="slider-section">
+    <div class="gallery-slider"></div>
+  </section>
+  
 
 <script src="galleryObjectMaker.js"></script>
 <script src="data.json"></script>
 <script>
-	let g = new GalleryObject(jsonData);
-	let elem = document.getElementById("gallerySlider");
-	g.createGallerySlider(elem);
+  fetch('data2.json')
+  .then(response => response.json())
+  .then(data => {
+    const elem = document.querySelector(".gallery-grid");
+    new GalleryObject("grid", elem, data);
+    const elem2 = document.querySelector(".gallery-slider");
+    new GalleryObject("slider", elem2, data);
+  })
+  .then(() => {
+    const src = "script.js";
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.body.appendChild(script);
+  });
 </script>
-<script src="script.js"></script>
+</script>
 </body>
 
 
