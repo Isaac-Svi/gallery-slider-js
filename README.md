@@ -18,13 +18,13 @@ With that being said, here are some instructions as to how this mini library is 
 
 ## Go to the body, and add any of the following elements:
 
-*For a slider:
+* For a slider:
 ```html
 <div class="gallery-slider"></div>
 ```
 OR
 
-*For a grid:
+* For a grid:
 ```html
 <div class="gallery-grid"></div>
 ```
@@ -41,11 +41,11 @@ These divs are where the gallery will be inserted.
 
 * Create the gallery object like so in the 2nd tag. 
 
-..*The first parameter in the GalleryObject is the "type" of gallery desired.  So far we have 2 options: "grid" or "slider".
-..*The second parameter is the element in which we're placing the gallery.
-..*Last is our JSON data, which will be explained in the next section.
+..* The first parameter in the GalleryObject is the "type" of gallery desired.  So far we have 2 options: "grid" or "slider".
+..* The second parameter is the element in which we're placing the gallery.
+..* Last is our JSON data, which will be explained in the next section.
 
-...The following is an example of how to initialize a "grid gallery".
+... The following is an example of how to initialize a "grid gallery".
 ```html
 <script>
   const elem = document.querySelector(".gallery-grid");
@@ -53,7 +53,7 @@ These divs are where the gallery will be inserted.
 </script>
 ```
 
-...The following is an example of how to initialize a "slider gallery".
+... The following is an example of how to initialize a "slider gallery".
 ```html
 <script>
   const elem = document.querySelector(".gallery-slider");
@@ -61,7 +61,7 @@ These divs are where the gallery will be inserted.
 </script>
 ```
 
-...I would just like to add that you can add the JSON however you like.  Here's an example of how to read and add the JSON asynchronously:
+... I would just like to add that you can add the JSON however you like.  Here's an example of how to read and add the JSON asynchronously:
 
 ```html
 <script>
