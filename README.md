@@ -10,9 +10,13 @@ With that being said, here are some instructions as to how this mini library is 
 
 ## Add the following style links to your header:
 
-* This link is the stylesheet for the gallery.
+* This link is the stylesheet for the slider gallery.
 ```html
-<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/30816dc878d55a1205a3fd08d607ee4105eeaf39/styles.css">
+<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/5b6222effc93131be0c0de5389ba87e944a53ab8/css/slider-styles.css">
+```
+* This link is the stylesheet for the grid gallery.
+```html
+<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/5b6222effc93131be0c0de5389ba87e944a53ab8/css/grid-styles.css">
 ```
 
 
@@ -20,13 +24,13 @@ With that being said, here are some instructions as to how this mini library is 
 
 * For a slider:
 ```html
-<div class="gallery-slider"></div>
+<div class="GS__gallery-slider"></div>
 ```
 OR
 
 * For a grid:
 ```html
-<div class="gallery-grid"></div>
+<div class="GS__gallery-grid"></div>
 ```
 
 These divs are where the gallery will be inserted.
