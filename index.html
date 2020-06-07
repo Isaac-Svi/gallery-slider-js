@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/slider-styles.css">
+	<link rel="stylesheet" href="css/grid-styles.css">
   
   <title>Gallery Slider</title>
 
@@ -22,11 +23,11 @@
 </head>
 <body>
 
-  <section id="grid-section">
-    <div class="gallery-grid"></div>
+  <section id="GS__grid-section">
+    <div class="GS__gallery-grid"></div>
   </section>
-  <section id="slider-section">
-    <div class="gallery-slider"></div>
+  <section id="GS__slider-section">
+    <div class="GS__gallery-slider"></div>
   </section>
   
 
@@ -36,9 +37,9 @@
   fetch('data2.json')
   .then(response => response.json())
   .then(data => {
-    const elem = document.querySelector(".gallery-grid");
+    const elem = document.querySelector(".GS__gallery-grid");
     new GalleryObject("grid", elem, data);
-    const elem2 = document.querySelector(".gallery-slider");
+    const elem2 = document.querySelector(".GS__gallery-slider");
     new GalleryObject("slider", elem2, data);
   })
   .then(() => {

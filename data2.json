@@ -1,6 +1,7 @@
 {
   "font" : "Roboto",
   "baseSize" : 300,
+  "backgroundColor" : "#235789",
   "reflection" : true,
   "flipDirection" : "x",
 	"src" : [

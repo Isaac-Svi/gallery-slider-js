@@ -1,0 +1,108 @@
+:root {
+  --GS__grid-size: 250px;
+}
+
+/* img[alt]:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  content: "Image Unavailable";
+} */
+
+.GS__gallery-grid {
+	width: 80%;
+  height: 100%;
+}
+
+.GS__grid {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--GS__grid-size), 1fr));
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+
+.GS__grid-container {
+  height: var(--GS__grid-size);
+  cursor: pointer;
+  position: relative;
+  perspective: calc(var(--GS__grid-size) * 3);
+  transition: 0.7s ease-in-out;
+}
+
+.GS__grid-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0%);
+  user-select: none;
+  will-change: transform;
+	background-color: #ddd;
+}
+
+.GS__grid-card .GS__front, .GS__grid-card .GS__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+	background-color: #ddd;
+  backface-visibility: hidden;
+}
+
+.GS__grid-container:hover .GS__grid-card.x {
+  transform: translateY(0%) rotateX(-180deg);
+}
+.GS__grid-container:hover .GS__grid-card.y {
+  transform: translateY(0%) rotateY(180deg);
+}
+
+.GS__grid-card .GS__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.GS__grid-card.x .GS__back {
+  transform: rotateX(-180deg);
+}
+.GS__grid-card.y .GS__back {
+  transform: rotateY(180deg);
+}
+
+.GS__grid-card .GS__front img, .GS__grid-card .GS__back img {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+
+.GS__grid-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;  
+  color: white;
+  background: rgba(0,0,0,0.3);
+}
+
+.GS__grid-info h3 {
+  padding: 1%;
+  margin: 1%;
+  font-size: calc(var(--GS__grid-size) * 0.1);
+}
+.GS__grid-info p {
+  font-size: calc(var(--GS__grid-size) * 0.05);
+  padding: 5%;
+}
