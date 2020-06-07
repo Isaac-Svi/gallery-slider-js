@@ -29,7 +29,7 @@ img[alt]:after {
   --GS__reflection: below calc(var(--GS__base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));
   --GS__clr-bg: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   :root {
     --GS__base-size: 650px;
   }

@@ -36,7 +36,7 @@ These divs are where the gallery will be inserted.
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/30816dc878d55a1205a3fd08d607ee4105eeaf39/galleryObjectMaker.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/4482aaec88bab4f76911733e142c5c1f8f30ac11/galleryObjectMaker.js"></script>
 ```
 
 * Create the gallery object like so in the 2nd tag. 
@@ -86,7 +86,7 @@ The following is an example of how to initialize a "grid gallery".
 
 * Last tag provides animation to the gallery's components.  Of course, if you followed the asynchronous method above to add this script, you don't have to add the following a second time.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/30816dc878d55a1205a3fd08d607ee4105eeaf39/script.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/4482aaec88bab4f76911733e142c5c1f8f30ac11/script.js"></script>
 ```
 
 ## How to write the JSON data:
