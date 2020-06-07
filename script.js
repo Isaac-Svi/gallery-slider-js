@@ -1,12 +1,29 @@
 //jshint esversion: 6
 // Copyright 2020 Isaac Svi
 
-let baseSize = Number(getComputedStyle(document.body).getPropertyValue('--GS__base-size').replace('px',''));
+let baseSize = Number(getComputedStyle(document.body).getPropertyValue('--GS__base-size').replace('rem',''));
+baseSize = Math.round(convertRemToPixels(baseSize));
 let slider = document.querySelector('.GS__slider');
 let cards = document.querySelectorAll('.GS__card');
 let containers = document.querySelectorAll('.GS__container');
 let bigCard = 1; //represents position of the big card in positions array
 let positions = [];
+
+function convertRemToPixels(rem) {    
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
+
+function roundFontSize() {  
+  size = Math.round(baseSize * 0.06);
+  size1 = Math.round(baseSize * 0.04);
+  size2 = Math.round(baseSize / 30);
+
+  console.log(size, size1, size2);
+
+  document.body.style.setProperty("--GS__info-h3-fs", size + "px");
+  document.body.style.setProperty("--GS__info-h3-p-fs", size1 + "px");
+  document.body.style.setProperty("--GS__info-h3-btn-fs", size2 + "px");
+}
 
 //very important; sets width for slider according to baseSize and number of cards user wants to put in
 setPositions();
@@ -39,13 +56,16 @@ for (let i = 0; i < cards.length; i++) {
 function setPositions () { //resets positions of gallery object when needed
   const distance = (baseSize / 5 * 2) / baseSize; //basically 0.4, this is because the size of each small container is 1/5 of the big container, and each space between the big container is also 1/5 of each big container
   let distancer = distance;
-  baseSize = Number(getComputedStyle(document.body).getPropertyValue('--GS__base-size').replace('px',''));
+  baseSize = Number(getComputedStyle(document.body).getPropertyValue('--GS__base-size').replace('rem',''));
+  baseSize = Math.round(convertRemToPixels(baseSize));
+
   for (let i = 0; i < containers.length; i++) {
     positions[i] = baseSize * distancer;
     distancer -= distance;
   }
   slider.style.left = positions[bigCard] + 'px';
   slider.style.width = baseSize + (baseSize / 2.5) * (containers.length - 1) + "px";
+  roundFontSize();
 }
 
 function shiftSlider (dir) {
