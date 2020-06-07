@@ -2,6 +2,7 @@
   "font" : "Roboto",
   "baseSize" : 300,
   "backgroundColor" : "#235789",
+  "objectFit" : "cover",
   "reflection" : true,
   "flipDirection" : "x",
 	"src" : [

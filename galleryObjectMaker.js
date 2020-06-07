@@ -4,6 +4,7 @@ class GalleryObject {
   constructor(type,element,json) {
     this.pictureSets = json.src;
     this.bg = json.backgroundColor;
+    this.objectFit = json.objectFit;
     this.info = json.pictureInfo;
     this.dir = this.isNullProperty(json.flipDirection) ? "x" : json.flipDirection;
     this.font = json.font;
@@ -30,7 +31,6 @@ class GalleryObject {
   setFontFamily(areas) {
     this.node.querySelectorAll(areas).forEach(child => child.style.fontFamily = this.font);
   }
-
   setReflection() {
     if (this.reflect || this.reflect == undefined) {
       const reflection = "below calc(var(--GS__base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));";
@@ -40,7 +40,6 @@ class GalleryObject {
       document.body.style.setProperty('--GS__reflection', 0);
     }
   }
-
   setBackground() {
     if (!this.isNullProperty(this.bg)) {
       document.body.style.setProperty('--GS__clr-bg', this.bg);
@@ -49,6 +48,12 @@ class GalleryObject {
       document.body.style.setProperty('--GS__clr-bg', "none");
     }
   }
+  setObjectFit() {
+    if (!this.isNullProperty(this.objectFit)) {
+      document.body.style.setProperty('--GS__object-fit', this.objectFit);
+    }
+  }
+
 
   createGalleryGrid(element) {
     this.node.classList.add("GS__grid");
@@ -115,6 +120,7 @@ class GalleryObject {
     this.setFontFamily(".GS__info, .GS__gallery-info-buttons button");
     this.setReflection(this.reflect);
     this.setBackground(this.bg);
+    this.setObjectFit(this.objectFit);
   }
 
   createAndAppendSliderContainers(num) {

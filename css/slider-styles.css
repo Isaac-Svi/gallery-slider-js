@@ -28,6 +28,7 @@ img[alt]:after {
   --GS__base-size: 500px;
   --GS__reflection: below calc(var(--GS__base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));
   --GS__clr-bg: none;
+  --GS__object-fit: cover;
 }
 @media (min-width: 1400px) {
   :root {
@@ -94,7 +95,7 @@ img[alt]:after {
   transform: translateY(-50%);
   user-select: none;
   will-change: transform;
-	background-color: #ddd;
+	background-color: var(--GS__clr-bg);
 }
 
 @keyframes GS__fade-in {
@@ -195,7 +196,7 @@ img[alt]:after {
 	background-color: var(--GS__clr-bg);
 }
 .GS__front img, .GS__back img {
-  object-fit: cover;
+  object-fit: var(--GS__object-fit);
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
