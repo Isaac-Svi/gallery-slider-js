@@ -24,7 +24,6 @@ img[alt]:after {
 }
 :root {
   --GS__transition: 1s;
-  font-size: calc(8px + 0.5vh + 0.4vw);
   --GS__base-size: 500px;
   --GS__reflection: below calc(var(--GS__base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));
   --GS__clr-bg: none;
@@ -277,10 +276,10 @@ img[alt]:after {
   outline: 0;
 }
 .GS__left {
-  left: 1rem;
+  left: 1em;
 }
 .GS__right {
-  right: 1rem;
+  right: 1em;
 }
 .GS__left span, .GS__right span {
   position: relative;
