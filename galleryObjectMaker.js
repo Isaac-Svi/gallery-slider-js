@@ -6,6 +6,7 @@ class GalleryObject {
     this.bg = json.backgroundColor;
     this.objectFit = json.objectFit;
     this.info = json.pictureInfo;
+		this.btnTxt = json.btnTxt;
     this.dir = this.isNullProperty(json.flipDirection) ? "x" : json.flipDirection;
     this.font = json.font;
     this.baseSize = json.baseSize ? json.baseSize : 250;
@@ -158,7 +159,7 @@ class GalleryObject {
         <h3>${info.header}</h3>
         <p>${info.text}</p>
         <div class="GS__gallery-info-buttons">
-          <button class="GS__flip-btn">Flip</button>
+          <button class="GS__flip-btn">${this.btnTxt}</button>
         </div>
       </div>
     `;
