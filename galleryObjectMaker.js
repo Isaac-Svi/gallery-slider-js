@@ -12,6 +12,7 @@ class GalleryObject {
     this.baseSize = json.baseSize ? json.baseSize : 250;
     this.reflect = json.reflection;
     this.node = document.createElement("div");
+    this.align = json.align;
 
     switch (type) {
       case "slider" : 
@@ -76,7 +77,7 @@ class GalleryObject {
     info = this.isNullProperty(info) ? [] : info;
     let container = `
       <div class="GS__grid-container">
-        <div class="GS__grid-card ${this.dir}">
+        <div class="GS__grid-card ${this.dir}" dir="${this.align}">
           <div class="GS__front">
             <img src='${pictures[0]}' alt="">
             ${this.createGridCardInfo(info[0])}
@@ -135,7 +136,7 @@ class GalleryObject {
   createCard(picSet, info) {
     info = this.isNullProperty(info) ? [] : info;
     return `
-      <div class='GS__card'>
+      <div class='GS__card' dir="${this.align}">
         <div class='GS__front'>
           <img src='${picSet[0]}' alt=''/>
           ${this.createCardInfo(info[0])}
@@ -153,13 +154,15 @@ class GalleryObject {
       'header' : "",
       'text' : ""
     };
+
+    const margin = this.align === "rtl" ? "style='margin-right: 80%;'" : "";
       
     return `
       <div class="GS__info">
         <h3>${info.header}</h3>
         <p>${info.text}</p>
         <div class="GS__gallery-info-buttons">
-          <button class="GS__flip-btn">${this.btnTxt}</button>
+          <button class="GS__flip-btn" ${margin}>${this.btnTxt}</button>
         </div>
       </div>
     `;

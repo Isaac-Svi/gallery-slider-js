@@ -161,8 +161,9 @@ img[alt]:after {
   transform: translateX(-50%);
   width: 100%;
 }
-.GS__gallery-info-buttons button {
+.GS__flip-btn {
   pointer-events: all;
+  margin-left: 80%;
   border: 2px solid white;
   outline: 0;
   color: white;
@@ -170,11 +171,7 @@ img[alt]:after {
   font-family: 'Open Sans', verdana, sans-serif;
   font-size: calc(var(--GS__base-size) / 30);
   padding: 1% 3%;
-  text-align: right;
   transition: 0.2s;
-}
-.GS__flip-btn {
-  margin-left: 80%;
 }
 .GS__flip-btn:hover {
   cursor: pointer;

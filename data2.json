@@ -5,7 +5,8 @@
   "objectFit" : "cover",
   "reflection" : true,
   "flipDirection" : "x",
-	"btnTxt" : "Flip",
+  "btnTxt" : "Flip",
+  "align" : "ltr",
 	"src" : [
 		["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
 		["https://bit.ly/2LJhqiy", "https://bit.ly/2WLx17E"],
