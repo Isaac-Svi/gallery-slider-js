@@ -12,7 +12,7 @@ With that being said, here are some instructions as to how this mini library is 
 
 * This link is the stylesheet for the slider gallery.
 ```html
-<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/31f82cc47a341150e4b297eaaed8a1a53cca73bd/css/slider-styles.css">
+<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/cff032c65fa12d06fa27d54dd39b754f08e72223/css/slider-styles.css">
 ```
 * This link is the stylesheet for the grid gallery.
 ```html
@@ -40,7 +40,7 @@ These divs are where the gallery will be inserted.
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/4c896b5d97dc543275e1cb91835822987c28d761/galleryObjectMaker.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/cff032c65fa12d06fa27d54dd39b754f08e72223/galleryObjectMaker.js"></script>
 ```
 
 * Create the gallery object like so in the 2nd tag. 
