@@ -40,7 +40,7 @@ These divs are where the gallery will be inserted.
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/3281ae13b005a0933faeffa562a6c05964357b9f/galleryObjectMaker.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/4c896b5d97dc543275e1cb91835822987c28d761/galleryObjectMaker.js"></script>
 ```
 
 * Create the gallery object like so in the 2nd tag. 
