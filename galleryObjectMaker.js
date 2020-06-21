@@ -13,6 +13,7 @@ class GalleryObject {
     this.reflect = json.reflection;
     this.node = document.createElement("div");
     this.align = json.align;
+    this.placeHolder = json.placeHolderImage;
 
     switch (type) {
       case "slider" : 
@@ -79,11 +80,11 @@ class GalleryObject {
       <div class="GS__grid-container">
         <div class="GS__grid-card ${this.dir}" dir="${this.align}">
           <div class="GS__front">
-            <img src='${pictures[0]}' alt="">
+            <img data-placeholder='${this.placeHolder}' src='${pictures[0]}' alt="">
             ${this.createGridCardInfo(info[0])}
           </div>
           <div class="GS__back">
-            <img src='${pictures[1]}' alt="">
+            <img data-placeholder='${this.placeHolder}' src='${pictures[1]}' alt="">
             ${this.createGridCardInfo(info[1])}
           </div>
         </div>
@@ -138,11 +139,11 @@ class GalleryObject {
     return `
       <div class='GS__card' dir="${this.align}">
         <div class='GS__front'>
-          <img src='${picSet[0]}' alt=''/>
+          <img src='${this.placeHolder}' data-placeholder='${picSet[0]}' alt=''/>
           ${this.createCardInfo(info[0])}
         </div>
         <div class='GS__back'>
-          <img src='${picSet[1]}' alt=''/>
+          <img src='${this.placeHolder}' data-placeholder='${picSet[1]}' alt=''/>
           ${this.createCardInfo(info[1])}
         </div>
       </div>

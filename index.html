@@ -48,6 +48,13 @@
     script.src = src;
     script.async = false;
     document.body.appendChild(script);
+  })
+  .then(() => {
+    //lazy load images
+    let imgs = document.querySelectorAll(".GS__card img");
+    imgs.forEach(img => {
+      img.setAttribute("src", img.getAttribute("data-placeholder"));
+    });
   });
 </script>
 </script>

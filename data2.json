@@ -7,6 +7,7 @@
   "flipDirection" : "x",
   "btnTxt" : "Flip",
   "align" : "ltr",
+  "placeHolderImage" : "https://bit.ly/37LnLED",
 	"src" : [
 		["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
 		["https://bit.ly/2LJhqiy", "https://bit.ly/2WLx17E"],
