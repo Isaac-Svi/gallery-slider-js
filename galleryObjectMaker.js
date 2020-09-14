@@ -30,7 +30,7 @@ class GalleryObject {
   isNullProperty(property) {
     return property === null || property === undefined || !property || property === "";
   }
-
+	
   setFontFamily(areas) {
     this.node.querySelectorAll(areas).forEach(child => child.style.fontFamily = this.font);
   }
@@ -151,17 +151,13 @@ class GalleryObject {
   }
 
   createCardInfo(info) {
-    if (this.isNullProperty(info)) info = {
-      'header' : "",
-      'text' : ""
-    };
-
     const margin = this.align === "rtl" ? "style='margin-right: 80%;'" : "";
       
     return `
       <div class="GS__info">
-        <h3>${info.header}</h3>
-        <p>${info.text}</p>
+        ${info && info.header ? `<h3>${info.header}</h3>` : ""}
+        ${info && info.text ? `<p>${info.text}</p>` : ""}
+        ${info && info.html ? `<div style="pointer-events: all;">${info.html}</div>` : ""}
         <div class="GS__gallery-info-buttons">
           <button class="GS__flip-btn" ${margin}>${this.btnTxt}</button>
         </div>

@@ -28,6 +28,7 @@ img[alt]:after {
   --GS__reflection: below calc(var(--GS__base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));
   --GS__clr-bg: none;
   --GS__object-fit: cover;
+	--GS__pointer-events: ;
 }
 @media (min-width: 1400px) {
   :root {

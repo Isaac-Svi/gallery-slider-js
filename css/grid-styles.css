@@ -1,5 +1,6 @@
 :root {
   --GS__grid-size: 250px;
+	--GS__pointer-events: none;
 }
 
 /* img[alt]:after {
@@ -52,7 +53,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  pointer-events: var(--GS__pointer-events);
   overflow: hidden;
 	background-color: #ddd;
   backface-visibility: hidden;

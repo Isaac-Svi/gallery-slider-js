@@ -1,22 +1,22 @@
 {
   "font" : "Roboto",
   "baseSize" : 300,
-  "backgroundColor" : "#235789",
+  "backgroundColor" : "",
   "objectFit" : "cover",
   "reflection" : true,
   "flipDirection" : "x",
   "btnTxt" : "Flip",
   "align" : "ltr",
-  "placeHolderImage" : "https://bit.ly/37LnLED",
+  "placeHolderImage" : "https://picsum.photos/400/400?random=1",
 	"src" : [
-		["https://bit.ly/3cGWlkO", "https://bit.ly/2Zg3lRT"],
-		["https://bit.ly/2LJhqiy", "https://bit.ly/2WLx17E"],
-		["https://bit.ly/2WSoP5T", "https://bit.ly/2TmxR8I"],
-		["https://bit.ly/2z6E6XG", "https://bit.ly/2XdKZOF"],
-		["https://bit.ly/2ZmpNsz", "https://bit.ly/2LIGZ3h"],
-		["https://bit.ly/2WSoP5T", "https://bit.ly/2TmxR8I"],
-		["https://bit.ly/2z6E6XG", "https://bit.ly/2XdKZOF"],
-		["https://bit.ly/2ZmpNsz", "https://bit.ly/2LIGZ3h"]
+		["https://picsum.photos/400/400?random=1", "https://picsum.photos/400/400?random=2"],
+		["https://picsum.photos/400/400?random=3", "https://picsum.photos/400/400?random=4"],
+		["https://picsum.photos/400/400?random=5", "https://picsum.photos/400/400?random=6"],
+		["https://picsum.photos/400/400?random=7", "https://picsum.photos/400/400?random=8"],
+		["https://picsum.photos/400/400?random=9", "https://picsum.photos/400/400?random=10"],
+		["https://picsum.photos/400/400?random=11", "https://picsum.photos/400/400?random=12"],
+		["https://picsum.photos/400/400?random=13", "https://picsum.photos/400/400?random=14"],
+		["https://picsum.photos/400/400?random=15", "https://picsum.photos/400/400?random=16"]
 	],
 	"pictureInfo" : [
 		[
@@ -25,8 +25,9 @@
 				"text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla magnam alias. Accusantium labore facere quaerat, animi dolore at ab?"
 			},
 			{
-				"header" : "Header Text",
-				"text" : "Text 2"
+        "header" : "Header Text",
+        "text" : "Text 2",
+				"html" : "<button style='pointer-events: all;'>Click</button>"
 			}
 		],
 		[
