@@ -14,6 +14,7 @@ class GalleryObject {
     this.node = document.createElement("div");
     this.align = json.align;
     this.placeHolder = json.placeHolderImage;
+    this.interval = json.sliderInterval;
 
     switch (type) {
       case "slider" : 
@@ -55,6 +56,9 @@ class GalleryObject {
     if (!this.isNullProperty(this.objectFit)) {
       document.body.style.setProperty('--GS__object-fit', this.objectFit);
     }
+  }
+  setSliderInterval() {
+    document.documentElement.style.setProperty('--GS__slider-interval', this.interval);
   }
 
 
@@ -124,6 +128,7 @@ class GalleryObject {
     this.setReflection(this.reflect);
     this.setBackground(this.bg);
     this.setObjectFit(this.objectFit);
+    this.setSliderInterval();
   }
 
   createAndAppendSliderContainers(num) {

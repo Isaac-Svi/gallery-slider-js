@@ -1,6 +1,6 @@
 //jshint esversion: 6
 // Copyright 2020 Isaac Svi
-
+let sliderInterval = Number(getComputedStyle(document.body).getPropertyValue('--GS__slider-interval'));
 let baseSize = Number(getComputedStyle(document.body).getPropertyValue('--GS__base-size').replace('px',''));
 let slider = document.querySelector('.GS__slider');
 let cards = document.querySelectorAll('.GS__card');
@@ -31,6 +31,38 @@ for (let i = 0; i < cards.length; i++) {
     cards[i].querySelectorAll('.GS__flip-btn')[j].addEventListener('click', function () {
       cards[i].style.animation = flag[i] ? 'GS__switch2 1s forwards' : 'GS__switch 1s forwards';
       flag[i] = flag[i] ? --flag[i] : ++flag[i];
+    });
+  }
+}
+
+//automatic movement setInterval function
+cardAnimation(sliderInterval);
+function cardAnimation(interval) {
+  if (isNaN(interval)) return;
+
+  var move;
+  autoMove();
+
+  function autoMove() {
+    move = setInterval(function () {
+      if (bigCard < cards.length - 1)
+        shiftSlider("right");
+      else {
+        for (let i = 0; i < cards.length; i++) {
+          shiftSlider("left");
+        }
+      }
+    }, interval);
+  }
+
+  const galleryEventHandlers = [right, left, slider];
+
+  for (let handler of galleryEventHandlers) {
+    handler.addEventListener('mouseover', e => {
+      clearInterval(move);
+    });
+    handler.addEventListener('mouseleave', e => {
+      autoMove();
     });
   }
 }

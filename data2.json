@@ -1,5 +1,6 @@
 {
   "font" : "Roboto",
+  "sliderInterval" : 10000,
   "baseSize" : 300,
   "backgroundColor" : "",
   "objectFit" : "cover",
