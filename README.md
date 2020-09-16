@@ -12,7 +12,7 @@ With that being said, here are some instructions as to how this mini library is 
 
 * This link is the stylesheet for the slider gallery.
 ```html
-<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/ab1fb561162af4fa697a1097c8a9dc3e84fc801d/css/slider-styles.css">
+<link rel="stylesheet" href="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/8eab5a27be712d9fe2cedf29b13454f2ac0bbfc2/css/slider-styles.css">
 ```
 * This link is the stylesheet for the grid gallery.
 ```html
@@ -40,7 +40,7 @@ These divs are where the gallery will be inserted.
 
 * The first tag gives us access to the gallery object where we can enter all of the data we want to show in the gallery.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/ab1fb561162af4fa697a1097c8a9dc3e84fc801d/galleryObjectMaker.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/8eab5a27be712d9fe2cedf29b13454f2ac0bbfc2/galleryObjectMaker.js"></script>
 ```
 
 * Create the gallery object like so in the 2nd tag. 
@@ -90,7 +90,7 @@ The following is an example of how to initialize a "grid gallery".
 
 * Last tag provides animation to the gallery's components.  Of course, if you followed the asynchronous method above to add this script, you don't have to add the following a second time.
 ```html
-<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/ab1fb561162af4fa697a1097c8a9dc3e84fc801d/script.js"></script>
+<script src="https://rawcdn.githack.com/Isaac-Svi/gallery-slider-js/8eab5a27be712d9fe2cedf29b13454f2ac0bbfc2/script.js"></script>
 ```
 
 ## How to write the JSON data:
