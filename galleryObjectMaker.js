@@ -15,6 +15,10 @@ class GalleryObject {
     this.align = json.align;
     this.placeHolder = json.placeHolderImage;
     this.interval = json.sliderInterval;
+    this.cardSpeed = json.cardSpeed;
+    this.cardRatio = json.cardRatio;
+    this.sliderArrowColor = json.sliderArrowColor;
+    this.gridBaseSize = json.gridBaseSize;
 
     switch (type) {
       case "slider" : 
@@ -31,41 +35,53 @@ class GalleryObject {
   isNullProperty(property) {
     return property === null || property === undefined || !property || property === "";
   }
-	
+  setSliderArrowColor() {
+    document.documentElement.style.setProperty('--GS__slider-arrow-color', this.sliderArrowColor);
+  }
+  setBaseSize() {
+    document.documentElement.style.setProperty('--GS__base', this.baseSize);
+    // document.documentElement.style.setProperty('--GS__base-size', this.baseSize + 'px');
+  }
   setFontFamily(areas) {
     this.node.querySelectorAll(areas).forEach(child => child.style.fontFamily = this.font);
   }
   setReflection() {
     if (this.reflect || this.reflect == undefined) {
       const reflection = "below calc(var(--GS__base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));";
-      document.body.style.setProperty('--GS__reflection', reflection);
+      document.documentElement.style.setProperty('--GS__reflection', reflection);
     }
     else {
-      document.body.style.setProperty('--GS__reflection', 0);
+      document.documentElement.style.setProperty('--GS__reflection', 0);
     }
   }
   setBackground() {
     if (!this.isNullProperty(this.bg)) {
-      document.body.style.setProperty('--GS__clr-bg', this.bg);
+      document.documentElement.style.setProperty('--GS__clr-bg', this.bg);
     }
     else {
-      document.body.style.setProperty('--GS__clr-bg', "none");
+      document.documentElement.style.setProperty('--GS__clr-bg', "none");
     }
   }
   setObjectFit() {
     if (!this.isNullProperty(this.objectFit)) {
-      document.body.style.setProperty('--GS__object-fit', this.objectFit);
+      document.documentElement.style.setProperty('--GS__object-fit', this.objectFit);
     }
   }
   setSliderInterval() {
     document.documentElement.style.setProperty('--GS__slider-interval', this.interval);
+  }
+  setCardSpeed() {
+    document.documentElement.style.setProperty('--GS__animation-time', this.cardSpeed);
+  }
+  setCardRatio() {
+    document.documentElement.style.setProperty('--GS__card-ratio', this.cardRatio);
   }
 
 
   createGalleryGrid(element) {
     this.node.classList.add("GS__grid");
     
-    document.body.style.setProperty('--GS__grid-size', this.baseSize + "px");
+    document.documentElement.style.setProperty('--GS__grid-size', this.gridBaseSize + "px");
 
     element.appendChild(this.node);
 
@@ -125,10 +141,14 @@ class GalleryObject {
       <div class='GS__right'><button><span></span></button></div>
     `;
     this.setFontFamily(".GS__info, .GS__gallery-info-buttons button");
-    this.setReflection(this.reflect);
-    this.setBackground(this.bg);
-    this.setObjectFit(this.objectFit);
+    this.setBaseSize();
+    this.setReflection();
+    this.setBackground();
+    this.setObjectFit();
     this.setSliderInterval();
+    this.setSliderArrowColor();
+    this.setCardSpeed();
+    this.setCardRatio();
   }
 
   createAndAppendSliderContainers(num) {

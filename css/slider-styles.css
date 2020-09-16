@@ -1,15 +1,5 @@
 /* Copyright 2020 Isaac Svi */
 
-.GS__gallery-slider {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: calc(var(--GS__base-size) * 1.8);
-  height: 100%;
-	overflow: hidden;
-}
-
 img[alt]:after {
   position: absolute;
   top: 0;
@@ -23,40 +13,57 @@ img[alt]:after {
   content: "Image Unavailable";
 }
 :root {
+  --tester: 5;
   --GS__transition: 1s;
-  --GS__base-size: 500px;
+  --GS__base: ;
+  --GS__base-size:calc(1px * var(--GS__base));
   --GS__reflection: below calc(var(--GS__base-size) / -5.1020408163) linear-gradient(transparent 60%, rgba(255,255,255,0.5));
   --GS__clr-bg: none;
   --GS__object-fit: cover;
   --GS__slider-interval: ;
+  --GS__animation-time: ;
+  --GS__card-ratio: ;
+  --GS__slider-arrow-color: #444;
 }
 @media (min-width: 1400px) {
   :root {
-    --GS__base-size: 650px;
+    --GS__base-size:calc(1.3px * var(--GS__base));
   }
 }
 @media (max-width: 900px) {
   :root {
-    --GS__base-size: 450px;
+    --GS__base-size:calc(0.9px * var(--GS__base));
   }
 }
 @media (max-width: 800px) {
   :root {
-    --GS__base-size: 400px;
+    --GS__base-size:calc(0.8px * var(--GS__base));
   }
 }
 @media (max-width: 450px) {
   :root {
-    --GS__base-size: 320px;
+    --GS__base-size:calc(0.64px * var(--GS__base));
   }
 }
 
-.GS__frame {
+.GS__gallery-slider {
+  --GS__slider-width: calc(var(--GS__base-size) + var(--GS__base-size) / var(--GS__card-ratio) * 4);
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-  width: calc(var(--GS__base-size) * 1.8);
+	width: var(--GS__slider-width);
+  height: 100%;
+	overflow: hidden;
+}
+
+.GS__frame {
+  --GS__frame-width: calc(var(--GS__base-size) + var(--GS__base-size) / var(--GS__card-ratio) * 4);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+  width: var(--GS__frame-width);
   height: var(--GS__base-size);
 	clip: rect(calc(var(--GS__base-size) * -1.2), auto, calc(var(--GS__base-size) * 1.2), auto);
 }
@@ -78,7 +85,7 @@ img[alt]:after {
 }
 .GS__container {
   position: relative;
-  flex: 0 0 calc(var(--GS__base-size) / 5);
+  flex: 0 0 calc(var(--GS__base-size) / var(--GS__card-ratio));
   height: 100%;
   perspective: calc(var(--GS__base-size) * 3);
   transition: var(--GS__transition) ease-in-out;
@@ -90,8 +97,8 @@ img[alt]:after {
   transition: var(--GS__transition) ease-in-out;
   transform-style: preserve-3d;
   animation: 0;
-  width: calc(var(--GS__base-size) / 5);
-  height: calc(var(--GS__base-size) * 0.16);
+  width: calc(var(--GS__base-size) / var(--GS__card-ratio));
+  height: calc(var(--GS__base-size) * 0.8 / var(--GS__card-ratio));
   transform: translateY(-50%);
   user-select: none;
   will-change: transform;
@@ -206,8 +213,8 @@ img[alt]:after {
   from {
     top: 50%;
     transform: translateY(-50%);
-    width: calc(var(--GS__base-size) / 5);
-    height: calc(var(--GS__base-size) * 0.16);
+    width: calc(var(--GS__base-size) / var(--GS__card-ratio));
+    height: calc(var(--GS__base-size) * 0.8 / var(--GS__card-ratio));
   }
   to {
     width: var(--GS__base-size);
@@ -219,8 +226,8 @@ img[alt]:after {
   from {
     top: 50%;
     transform: translateY(-50%) rotateY(0deg);
-    width: calc(var(--GS__base-size) / 5);
-    height: calc(var(--GS__base-size) * 0.16);
+    width: calc(var(--GS__base-size) / var(--GS__card-ratio));
+    height: calc(var(--GS__base-size) * 0.8 / var(--GS__card-ratio));
   }
   to {
     width: var(--GS__base-size);
@@ -237,8 +244,8 @@ img[alt]:after {
   }
   100% {
     top: 50%;
-    width: calc(var(--GS__base-size) / 5);
-    height: calc(var(--GS__base-size) * 0.16);
+    width: calc(var(--GS__base-size) / var(--GS__card-ratio));
+    height: calc(var(--GS__base-size) * 0.8 / var(--GS__card-ratio));
     transform: translateY(-50%) rotateY(0deg);
   }
 }
@@ -251,8 +258,8 @@ img[alt]:after {
   }
   100% {
     top: 50%;
-    width: calc(var(--GS__base-size) / 5);
-    height: calc(var(--GS__base-size) * 0.16);
+    width: calc(var(--GS__base-size) / var(--GS__card-ratio));
+    height: calc(var(--GS__base-size) * 0.8 / var(--GS__card-ratio));
     transform: translateY(-50%) rotateY(0deg);
   }
 }
@@ -274,10 +281,10 @@ img[alt]:after {
   outline: 0;
 }
 .GS__left {
-  left: 1em;
+  left: calc(var(--GS__base-size) / var(--GS__card-ratio) * 1.5);
 }
 .GS__right {
-  right: 1em;
+  right: calc(var(--GS__base-size) / var(--GS__card-ratio) * 1.5);
 }
 .GS__left span, .GS__right span {
   position: relative;
@@ -285,7 +292,7 @@ img[alt]:after {
   cursor: pointer;
   height: 20px;
   width: 20px;
-  border: solid white;
+  border: solid var(--GS__slider-arrow-color);
   border-width: 6px 6px 0 0;
   z-index: 999;
 }
@@ -304,16 +311,9 @@ img[alt]:after {
 }
 
 @media (max-width: 700px) {
-  .GS__left {
-    left: calc(var(--GS__base-size) / 4);
-  }
-  .GS__right {
-    right: calc(var(--GS__base-size) / 4);
-  }
   .GS__left span, .GS__right span {
     height: 15px;
     width: 15px;
-    border: solid #444;
     border-width: 5px 5px 0 0;
   }
 }
@@ -321,16 +321,9 @@ img[alt]:after {
   .GS__left, .GS__right {
     top: 60%;
   }
-  .GS__left {
-    left: calc(var(--GS__base-size) / 2.5);
-  }
-  .GS__right {
-    right: calc(var(--GS__base-size) / 2.5);
-  }
   .GS__left span, .GS__right span {
     height: 15px;
     width: 15px;
-    border: solid #fff;
     border-width: 5px 5px 0 0;
   }
 }
