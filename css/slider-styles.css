@@ -264,6 +264,10 @@ img[alt]:after {
   }
 }
 
+.GS__left:active:hover, .GS__right:active:hover {
+  transform: scale(0.8);
+}
+
 .GS__frame:hover .GS__left,
 .GS__frame:hover .GS__right{
   opacity: 1;
